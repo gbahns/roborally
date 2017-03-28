@@ -137,8 +137,8 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 150px;
-        padding-bottom: 100px;
+        padding-top: 75px;
+        padding-bottom: 10px;
     }
 
     header .intro-text .name {
@@ -166,7 +166,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
+        padding: 0;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
