@@ -4,9 +4,9 @@ Template.applicationLayout.rendered = function () {
     $('.navbar-toggle:visible').click();
   });
 
-  window.doorbellOptions = {
-    appKey: '1GPXj8RPAXt3iGibqNSf1978NLFUZBXo0dankpi1X7pc3ApynhRdEGEN8bZohI4f'
-  };
+  // window.doorbellOptions = {
+  //   appKey: '1GPXj8RPAXt3iGibqNSf1978NLFUZBXo0dankpi1X7pc3ApynhRdEGEN8bZohI4f'
+  // };
   (function (d, t) {
     var g = d.createElement(t);
     g.id = 'doorbellScript';
