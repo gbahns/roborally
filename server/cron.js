@@ -36,7 +36,7 @@ Meteor.startup(function () {
             console.log("Removing game with disconnected owner: " + game._id);
             Games.remove(game._id);
           }
-        }, 5000);
+        }, 10000);
       }
     });
 

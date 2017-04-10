@@ -1,0 +1,25 @@
+template(name="gameHistory")
+  div.chat.well
+    unless currentUser
+      +splash
+    else
+      h3 Finished games
+      //hr.star-well
+      table
+        thead
+          tr
+            th game
+            th winner
+            th started
+            th completed
+            th duration
+            th age
+        tbody
+          each endedGames
+            tr
+              td: a.white(href="{{pathFor route='game.page'}}") #{name}
+              td: span.small.text-lowercase #{winner} 
+              td: span.small.text-lowercase {{formatDate2 submitted}}
+              td: span.small.text-lowercase {{formatDate2 stopped}}
+              td: span.small.text-lowercase {{formatTimeDiff submitted stopped}}
+              td: span.small.text-lowercase {{formatDate stopped}}

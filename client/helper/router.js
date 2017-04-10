@@ -41,6 +41,28 @@ Router.route('/online', {
   }
 });
 
+Router.route('/history', {
+  name: 'gamehistory.page',
+  loadingTemplate: 'loading',
+
+  waitOn: function() {
+    return [Meteor.subscribe('games'),
+      Meteor.subscribe('chat', "global")];
+  },
+
+  action: function() {
+    mixpanel.track("Viewed game history Page");
+    this.render('gameHistory');
+    //this.render('gameItemPostForm', {to: 'rightPanel'});
+    // this.render('chat', {
+    //   to: 'rightPanel2',
+    //   data: function() {
+    //     return {messages: Chat.find(), gameId: "global"};
+    //   }
+    // });
+  }
+});
+
 Router.route('/ranking', {
   name: 'ranking.page',
   loadingTemplate: 'loading',
