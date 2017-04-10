@@ -53,13 +53,6 @@ Router.route('/history', {
   action: function() {
     mixpanel.track("Viewed game history Page");
     this.render('gameHistory');
-    //this.render('gameItemPostForm', {to: 'rightPanel'});
-    // this.render('chat', {
-    //   to: 'rightPanel2',
-    //   data: function() {
-    //     return {messages: Chat.find(), gameId: "global"};
-    //   }
-    // });
   }
 });
 
