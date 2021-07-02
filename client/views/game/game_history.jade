@@ -11,15 +11,15 @@ template(name="gameHistory")
             th game
             th winner
             th started
-            th completed
+            //th completed
             th duration
-            th age
+            //th age
         tbody
           each endedGames
             tr
-              td: a.white(href="{{pathFor route='game.page'}}") #{name}
-              td: span.small.text-lowercase #{winner} 
-              td: span.small.text-lowercase {{formatDate2 submitted}}
-              td: span.small.text-lowercase {{formatDate2 stopped}}
-              td: span.small.text-lowercase {{formatTimeDiff submitted stopped}}
-              td: span.small.text-lowercase {{formatDate stopped}}
+              td(align="left", width="360"): a.white(href="{{pathFor route='game.page'}}") #{name}
+              td(align="left", width="90"): span.small.text-lowercase #{winner} 
+              td(align="left", width="155"): span.small.text-lowercase {{formatDate2 submitted}}
+              //td(align="left", width="200"): span.small.text-lowercase {{formatDate2 stopped}}
+              td(align="left", width="95"): span.small.text-lowercase {{formatTimeDiff submitted stopped}}
+              //td(align="left", width="120"): span.small.text-lowercase {{formatDate stopped}}
