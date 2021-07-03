@@ -4,6 +4,11 @@ template(name="ranking")
       +splash
     else
       .highscores
+        h2 Standings
+        hr.star-well
+        each this.standings
+          p #{rank}. #{name} (#{value})
+        br
         h2 Most games played
         hr.star-well
         each this.mostPlayed

@@ -22,3 +22,7 @@ Meteor.publish("cards", function(gameId) {
 Meteor.publish("highscores", function() {
   return Highscores.find();
 });
+
+Meteor.publish("standings", function() {
+  return Standings.find();
+});
