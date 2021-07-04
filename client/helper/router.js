@@ -61,7 +61,7 @@ Router.route('/ranking', {
   loadingTemplate: 'loading',
 
   waitOn: function() {
-    return [Meteor.subscribe('highscores'), Meteor.subscribe('chat', "global")];
+    return [Meteor.subscribe('standings'), Meteor.subscribe('highscores'), Meteor.subscribe('chat', "global")];
   },
 
   action: function() {

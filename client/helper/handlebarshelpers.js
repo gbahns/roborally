@@ -9,3 +9,7 @@ Handlebars.registerHelper("formatDate2", function(timestamp) {
 Handlebars.registerHelper("formatTimeDiff", function(timestamp1, timestamp2) {
     return moment.duration(timestamp2 - timestamp1).humanize();
 });
+
+Handlebars.registerHelper("formatPercentage", function(n) {
+    return n.toLocaleString(undefined, {minimumFractionDigits: 3, maximumFractionDigits: 3});
+});

@@ -3,19 +3,38 @@ template(name="ranking")
     unless currentUser
       +splash
     else
-      .highscores
+      .standings
         h2 Standings
-        hr.star-well
-        each this.standings
-          p #{rank}. #{name} (#{value})
-        br
-        h2 Most games played
-        hr.star-well
-        each this.mostPlayed
-          p #{rank}. #{name} (#{value})
-        br
-        h2 Most games won
-        hr.star-well
-        each this.mostWon
-          p #{rank}. #{name} (#{value})
-        br
+
+        table(align="center")
+          thead
+            tr
+              th
+              th(colspan="4") games 
+              th
+              th(colspan="4") opponents
+            tr
+              th player
+              th played
+              th won
+              th lost
+              th pct
+              th(width="20px")
+              th played 
+              th won
+              th lost
+              th pct
+          tbody
+            each standings
+              tr
+                .name 
+                  td #{name}
+                td #{played} 
+                td #{won}
+                td #{lost}
+                td {{formatPercentage pct}}
+                td
+                td #{opponents_played}
+                td #{opponents_defeated}
+                td #{lost}
+                td {{formatPercentage pvp_pct}}
